@@ -12,7 +12,7 @@ function Login() {
     const signIn = async () => {
         await signInWithPopup(auth, provider)
             .catch(alert)
-        setUser(auth.currentUser)
+        setUser(auth?.currentUser)
     }
 
     // useEffect(() => {
