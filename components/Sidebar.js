@@ -22,7 +22,6 @@ export default function Sidebar() {
 
     async function updateChatSnapshot() {
         const chatSnapshot = await getDocs(q)
-        console.log("chats updated")
         setChats(chatSnapshot)
     }
 
@@ -44,7 +43,7 @@ export default function Sidebar() {
                 users: [user.email, input]
             })
                 .then(() => {
-                    console.log("added to db")
+                    // console.log("added to db")
                     updateChatSnapshot()
                 }
                 )
@@ -80,9 +79,7 @@ export default function Sidebar() {
 
 
     const signOut = async () => {
-        console.log("logout clicked");
         await auth.signOut();
-        console.log(auth.currentUser);
         setUser(auth.currentUser)
     }
 
