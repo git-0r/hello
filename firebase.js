@@ -5,7 +5,7 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth"
 // import {getApps} from "firebase"
 // const Firebase_API_KEY = process.env.API_KEY
 const firebaseConfig = {
-    apiKey: API_KEY,
+    apiKey: process.env.API_KEY,
     authDomain: "hello-71515.firebaseapp.com",
     projectId: "hello-71515",
     storageBucket: "hello-71515.appspot.com",
